@@ -1,0 +1,86 @@
+$theme-color: #F03C02;
+
+@import "theme/variables";
+@import "bootstrap.3.0.2/bootstrap";
+@import "font-awesome";
+@import "theme/navbar";
+@import "theme/footer";
+@import "theme/form";
+@import "theme/carousel";
+@import "theme/home";
+@import "theme/products";
+ 
+.main {
+  padding: 20px 0;
+}
+.container.register  {
+  background-color: $theme-color;
+  color: #fff;
+  h3 {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.section-title {
+  color: $theme-color;
+  text-align: center;
+  background-color: $gray-lighter;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
+}
+.section-content {
+  text-align: center;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
+}
+.section-footer {
+  background-color: $gray-dark;
+  color: $gray-light;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed; 
+  h3 {
+    color: #fff;
+  }
+}
+.iconic {
+  background-image: image-url("icons.png");
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.iconic-scooter {
+  background-position: 0 0;
+}
+.iconic-moto {
+  background-position: -80px 0;
+}
+.iconic-quad {
+  background-position: -160px 0;
+}
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+.nav-tabs {
+  text-align: center;
+}
+.grid {
+  .title {
+    font-size: $font-size-base + 4;
+    line-height: $line-height-computed + 8;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+  }
+}
+
+
+

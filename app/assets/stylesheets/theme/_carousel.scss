@@ -1,0 +1,23 @@
+.carousel-control {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  top: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  line-height: 60px;
+  @include opacity(1); 
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    background-color: #000;
+    color: #fff;
+    @include opacity(1);
+  }
+  &.right,
+  &.left {
+    background-image: none;
+  }
+}

@@ -1,0 +1,25 @@
+<%# cache([site, I18n.locale, 'header']) do %>
+<!-- Header
+================================================== -->
+<header class="navbar navbar-default hidden-print">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to(site.title, root_url, :class => "navbar-brand", :alt => site.subtitle) %>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse">
+      <%= render 'menu', :sections => site.primary_menu, :menu_name => 'navbar-nav navbar-right' %>
+      <div class="pull-right">
+        <a class="btn btn-link" href="#"><i class="icon-phone"></i> +590 590 99 99 99</a>
+        <a class="btn btn-link" href="#contact"><i class="icon-envelope"></i> Nous Contacter</a>
+      </div>
+    </nav>
+    
+  </div>
+</header>
+<%# end %>

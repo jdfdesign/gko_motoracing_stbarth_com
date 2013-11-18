@@ -1,0 +1,14 @@
+<article class="col-xs-6 col-sm-4 thumbnail-item">
+  <div class="thumbnail">
+  <%= link_to(motorcycle.public_url) do %>
+    <%= image_tag(motorcycle.thumbnail.thumbnail("450x325#").url(), :alt => motorcycle.thumbnail.title, :class => "img-responsive" ) if motorcycle.thumbnail %>
+    <div class="caption">
+      <h4 class="thumbnail-title"><%= motorcycle.title %></h4>
+      <div class="thumbnail-price"><%= indivisible_number_to_currency(motorcycle.price) %></div>
+    </div>
+    <div class="wrap"></div>
+    <i class="icon-zoom-in icon-2x"></i> 
+  <% end %>
+  </div>
+</article>
+

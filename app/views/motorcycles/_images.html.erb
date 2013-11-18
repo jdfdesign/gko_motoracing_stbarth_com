@@ -1,0 +1,21 @@
+
+<% if images.any? %>    
+<%
+image_geometry = local_assigns.has_key?(:image_style) ? image_style : site.preferred_image_carousel_size
+thumb_geometry = local_assigns.has_key?(:thumb_style) ? thumb_style : site.preferred_image_thumb_size
+%>
+<div class='product-images'>   
+    <div class='product-images-large'>
+      <div class='product-images-large-loader'></div>
+    </div>
+    <div class='products-thumbnails-container'>
+      <div class='products-thumbnails'>
+        <ul class="nav">
+        <% images.each do |img| %>
+          <li class="hide"><%= link_to(image_fu(img, thumb_geometry), img.thumbnail(image_geometry).url, :"data-zoom-url" => img.thumbnail("x1400").url) %></li>
+        <% end %>
+        </ul>
+      </div> 
+    </div> 
+</div> 
+<% end %>

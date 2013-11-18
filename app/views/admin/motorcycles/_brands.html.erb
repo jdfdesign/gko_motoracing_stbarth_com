@@ -1,0 +1,20 @@
+<div class='control-group'>
+	<label class="control-label">Marques</label>
+	<div class='controls'>
+		<table class="<%= Gko::Core.admin_table_css %>">
+		  <thead><tr>
+			<th><%= t(:"simple_form.labels.brand.name") %></th>
+			<th><%= t(:"simple_form.labels.brand.image") %></th>
+			<th class='actions'></th>
+		  </tr>
+		  </thead>
+		  <tbody id="color_fields">
+		    <%= f.simple_fields_for(:brand) do |pp_form| %>
+		      <%= render 'brand_fields', :f => pp_form %>
+		    <% end %>
+		  </tbody>
+		</table>
+		<%= link_to_add_fields("add fields",
+		  'tbody#brand_fields', f, :colors, :id => "add_brand_fields_btn") %>
+	</div>
+</div>

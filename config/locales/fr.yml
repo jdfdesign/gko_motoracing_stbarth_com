@@ -1,0 +1,66 @@
+fr:
+  activerecord:
+    models:
+      motorcycle_list: Catalogue
+      motorcycle: Article
+
+  motorcycles:
+    read_more: "Voir le détail"
+    no_record_found: "Aucun produit n'a été trouvé"
+
+  simple_form:
+    labels:
+      motorcycle_list:
+        title: "Titre de la page"
+        body: "Introduction"
+      motorcycle:
+        body: "Description" 
+        title: "Nom" 
+        name: "Référence" 
+        brand: "Marque" 
+        engine_type: "Type" 
+        cylinder: "Cylindrée" 
+        circulation_year: "Mise en circulation" 
+        mileage: "Kilométrage" 
+        price: "Prix" 
+        in_stock: "En stock" 
+        first_hand: "Véhicule Neuf" 
+        color: "Couleur" 
+        color_attributes: "Couleurs"
+
+  admin:
+    motorcycle_lists:
+      help: "todo" 
+      actions:
+        edit: Catalogue 
+        new: Nouveau catalogue
+        destroy: Supprimer ce catalogue
+        show: Lister les produits
+        view: Voir le catalogue
+        titles:
+          index: Liste des produits
+      tooltips:
+        edit: Modifier le catalogue
+        show: Voir la
+      titles:
+        edit: Modification du catalogue
+             
+    motorcycles: 
+      collection:
+        empty: "Aucun produit n'a été trouvé."
+      actions:
+        new: Ajouter un produit
+        destroy: Supprimer ce produit
+        edit: Modifier ce produit
+        index: Articles
+        view: Voir la page publique de ce produit
+        previous: Previous
+        next: Next
+      tooltips:
+        index: Lister les produits
+      titles:
+        new: Ajout d'un produit
+        index: Liste des produits
+        edit: Modification d'un produit
+      columns:
+        motorcycle: Article

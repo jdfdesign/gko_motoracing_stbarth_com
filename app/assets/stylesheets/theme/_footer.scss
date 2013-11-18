@@ -1,0 +1,15 @@
+.outer-container-footer .nav > li > a,
+#footer .nav > li > a {
+  float: none;
+  padding: 12px;
+  line-height: 19px;
+  color: $gray-light;
+  text-decoration: none;
+  text-shadow: none;
+  background-color: transparent;
+  font-size: 11px;
+  text-transform: uppercase;
+  &:hover {
+     color: $gray-darker;
+  };
+}

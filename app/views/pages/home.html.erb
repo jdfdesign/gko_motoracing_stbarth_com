@@ -1,0 +1,149 @@
+<% @catalog = site.motorcycle_lists.first %>
+
+<div class="carousel slide" id="home-carousel">
+  <!-- Carousel indicator --> 
+  <ol class="carousel-indicators">
+    <% resource.images.each_with_index do |img, index| %>
+      <li data-target="#home-carousel" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+    <% end %>
+  </ol>
+  <div class="carousel-inner">
+  <% resource.images.each_with_index do |img, index| %>
+    <div class="item <%= 'active' if index == 0 %>">
+      <%= image_fu(img, "1400x800#", :rel => "external") %> 
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Nous sommes MotoRacing</h1>
+          <hr>
+          <p class="lead">Les spécialistes du 2 roues et quads à St-Barth</p>
+          <a class="btn btn-large" href="<%= @catalog.public_url %>"><i class="icon-search"></i> Trouver un véhicule</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#home-carousel" data-slide="prev"><icon class="icon-angle-left"></i></a>
+  <a class="carousel-control right" href="#home-carousel" data-slide="next"><icon class="icon-angle-right"></i></a>
+</div>
+<section class="section-title">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Nos Véhicules</h1>
+      </div>
+    </div> 
+  </div>
+</section>
+<div class="container section-content"> 
+  <div class="row">
+    <div class="col-sm-4 text-center">
+      <div class="iconic iconic-scooter"></div>
+      <h3>Scooters</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <a class="btn btn-link" href="<%= @catalog.public_url %>"><i class="icon-search"></i> Trouver un scooter</a>
+    </div> 
+    <div class="col-sm-4">
+      <div class="iconic iconic-moto"></div>
+      <h3>Motos</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <a class="btn btn-link" href="<%= @catalog.public_url %>"><i class="icon-search"></i> Trouver une moto</a>
+    </div>
+    <div class="col-sm-4 text-center">
+     <div class="iconic iconic-quad"></div>
+      <h3>Quads</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <a class="btn btn-link" href="<%= @catalog.public_url %>"><i class="icon-search"></i> Trouver un quad</a>
+    </div>
+  </div>
+</div>
+<section class="section-title">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Nos Services</h1>
+      </div>
+    </div> 
+  </div>
+</section>
+<div class="container section-content"> 
+  <div class="row">
+    <div class="col-sm-4">
+      <figure>
+        <i class="icon-money icon-128"></i>
+      </figure>
+      <h3>Vente neuf et occasion</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div> 
+    <div class="col-sm-4"> 
+      <figure>
+        <i class="icon-wrench icon-128"></i>
+      </figure>
+      <h3>Réparation</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="col-sm-4">
+      <figure>
+        <i class="icon-gift icon-128"></i>
+      </figure>
+      <h3>Accessoires</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+  </div>
+</div>
+<section class="section-title">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>L'équipe</h1> 
+      </div>
+    </div> 
+  </div>
+</section>
+<div class="container section-content"> 
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <figure>
+        <i class="icon-user icon-128"></i>
+      </figure>
+      <h3>John Doe</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div> 
+    <div class="col-xs-12 col-sm-4"> 
+      <figure>
+        <i class="icon-user icon-128"></i>
+      </figure>
+      <h3>John Doe</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <figure>
+        <i class="icon-user icon-128"></i>
+      </figure>
+      <h3>John Doe</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+  </div>
+</div> 
+<section class="section-title">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Les Marques</h1> 
+      </div>
+    </div> 
+  </div>
+</section>
+<div class="container section-content section-brands"> 
+  <div class="row">
+    <% ["Aprilia","Bmw","Daelim", "Ducati", "Gilera", "HarleyDavidson", "Kawasaki","Kymco","Ktm","Mbk","Guzzi","Peugeot", "Piaggio","Suzuki", "Sym", "Triumph","Yamaha"].each do |brand| %>
+    <div class="col-xs-6 col-sm-3 col-md-2">
+      <div class="thumbnail">
+        <%= image_tag("#{brand}.png", :alt => brand, :class => "img-responsive") %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+

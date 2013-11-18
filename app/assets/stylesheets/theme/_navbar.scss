@@ -1,0 +1,24 @@
+
+.navbar {
+  .btn-link {
+    color: #fff;
+    text-shadow: none;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    border-left: 1px solid lighten($navbar-default-bg, 10%);
+    border-bottom: 4px solid $navbar-default-bg;
+    &:hover {
+      border-bottom: 4px solid #fff;
+      text-decoration: none;
+    }
+  }
+  .nav > li > a {
+    text-transform: uppercase;
+    font-weight: 700;
+    border-left: 1px solid lighten($navbar-default-bg, 10%);
+    border-bottom: 4px solid $navbar-default-bg;
+    &:hover {
+      border-bottom: 4px solid #fff;
+    } 
+  }
+}

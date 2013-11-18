@@ -1,0 +1,35 @@
+<%= simple_form_for(:search, :url => @section.public_url, :remote => true, :html => {:method => :get, :class => "products-filter" }) do |f| %> 
+  <%= f.input :with_title,
+      :label => false, 
+      :required => false,
+      :placeholder => 'Nom' %>
+  <%= f.input :with_first_hand,
+      :collection => [["Neuf", 1], ["Occasion", 0]],
+      :as => :select,
+      :label => false, 
+      :required => false,
+      :include_blank => false,
+      :prompt => "Neuf et Occasion" %>
+  <%= f.input :with_engine_type,
+        :collection => Motorcycle::TYPES,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Tous les types" %>
+  <%= f.input :with_cylinder,
+        :collection => Motorcycle::CYLINDERS,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Tous les cylindrées" %>
+  <%= f.input :with_brand,
+        :collection => site.brands.all,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Toutes les marques" %>  
+      <%= f.button 'submit', 'Rechercher', :class => " btn-large btn-primary btn-block" %> 
+<% end %>
