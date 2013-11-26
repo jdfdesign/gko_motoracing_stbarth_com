@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 group :assets do
  gem 'sass-rails', '~> 3.2.6'
@@ -7,7 +7,7 @@ group :assets do
 end
 
 group :production do
-	git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.07" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.09.rc1" do
 	  gem "gko_core"
 	  gem "gko_auth"
 	  gem "gko_documents"
@@ -15,6 +15,7 @@ group :production do
 	  gem "gko_features"
 	end
 end
+
 #group :development, :test do
 #  gem "gko_core", :path => '~/Github/gko_cms3/gko_core'
 #  gem "gko_auth", :path => '~/Github/gko_cms3/gko_auth'
