@@ -1,8 +1,7 @@
 class Motorcycle < ActiveRecord::Base
 
-
   TYPES = ["Scooter","Moto", "Quad"]
-  CYLINDERS = [50,80,100,125,250,400,500,600]
+  CYLINDERS = [50,80,100,125,250,300,400,450,465,500,550,600]
   TRANSLATED_FIELD = [
     :title, :body, :meta_description, :meta_title, :slug
   ].freeze
