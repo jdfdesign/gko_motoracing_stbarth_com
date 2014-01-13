@@ -22,7 +22,9 @@
 // --------------------------------------------------
 .thumbnail-item > .thumbnail {
   position: relative;
+  min-height: 210px;
   a {
+    
     &:hover,
     &:focus {
       text-decoration: none;

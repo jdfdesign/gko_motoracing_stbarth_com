@@ -1,1 +1,1 @@
-$("#product-list-wrapper").html("<%= escape_javascript(render_collection) %>")
+$("#product-list-wrapper").html("<%= escape_javascript(render @motorcycles) %>")
