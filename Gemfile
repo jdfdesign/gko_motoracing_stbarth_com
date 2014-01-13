@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 group :assets do
- gem 'sass-rails', '~> 3.2.6'
- gem 'coffee-rails', '~> 3.2.2'
- gem 'uglifier', '>= 1.2.6'
+  gem 'sass-rails', '~> 3.2.6'
+  gem 'coffee-rails', '~> 3.2.2'
+  gem 'uglifier', '~> 2.4.0'
 end
 
 group :production do
