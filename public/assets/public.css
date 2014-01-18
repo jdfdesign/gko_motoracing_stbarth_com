@@ -10123,7 +10123,7 @@ span.valid {
 }
 /* line 9, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .item {
-  max-height: 500px;
+  height: 500px;
 }
 /* line 14, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption {
@@ -10210,7 +10210,7 @@ span.valid {
 /* line 23, ../../app/assets/stylesheets/theme/_products.scss */
 .thumbnail-item > .thumbnail {
   position: relative;
-  min-height: 210px;
+  min-height: 270px;
 }
 /* line 29, ../../app/assets/stylesheets/theme/_products.scss */
 .thumbnail-item > .thumbnail a:hover, .thumbnail-item > .thumbnail a:focus {
