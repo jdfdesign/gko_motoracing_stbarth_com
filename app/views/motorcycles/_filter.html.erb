@@ -4,11 +4,6 @@
       :required => false,
       :placeholder => 'Nom' %>
   <%= f.input :with_in_stock, :as => :boolean %>
-  <div class="checkbox">
-      <label>
-        <input type="checkbox"> Check me out
-      </label>
-    </div>
   <%= f.input :with_engine_type,
         :collection => Motorcycle::TYPES,
         :as => :select,
