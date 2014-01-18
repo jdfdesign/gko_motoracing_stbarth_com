@@ -6,6 +6,7 @@ class MotorcyclesController < ContentsController
   has_scope :with_first_hand, :only => :index
   has_scope :with_cylinder, :only => :index
   has_scope :with_title, :only => :index
+  has_scope :with_in_stock, :type => :boolean, :only => :index
   
   self.includes = [:colors, :brand]
   

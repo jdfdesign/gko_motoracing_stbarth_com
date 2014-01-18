@@ -59,6 +59,10 @@ class Motorcycle < ActiveRecord::Base
     where(:first_hand => q)
   end
   
+  def self.with_in_stock
+    where(:in_stock => true)
+  end
+  
   # Indicate if this page should be included in robot.txt
   # use trackable? rather than checking the attribute directly. this
   # allows sub-classes to override trackable? if they want to provide

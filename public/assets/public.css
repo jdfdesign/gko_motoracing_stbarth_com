@@ -10034,14 +10034,25 @@ textarea.form-control {
   resize: none;
 }
 
-/* line 28, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 27, ../../app/assets/stylesheets/theme/_form.scss */
+.boolean .controls {
+  display: inline-block;
+}
+
+/* line 30, ../../app/assets/stylesheets/theme/_form.scss */
+.checkbox {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* line 34, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-/* line 33, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 39, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   width: 36px;
   height: 36px;
@@ -10050,17 +10061,17 @@ span.error, span.valid {
   background-repeat: no-repeat;
 }
 
-/* line 40, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 46, ../../app/assets/stylesheets/theme/_form.scss */
 span.error {
   background-image: "/assets/notifications/error.svg";
 }
 
-/* line 43, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 49, ../../app/assets/stylesheets/theme/_form.scss */
 span.valid {
   background-image: "/assets/notifications/valid.svg";
 }
 
-/* line 47, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 53, ../../app/assets/stylesheets/theme/_form.scss */
 .alert {
   display: none;
   border: 0;
@@ -10069,7 +10080,7 @@ span.valid {
   color: #fff;
 }
 
-/* line 54, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 60, ../../app/assets/stylesheets/theme/_form.scss */
 .alert-success {
   background-color: #22b573;
   color: #fff;
@@ -10112,7 +10123,7 @@ span.valid {
 }
 /* line 9, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .item {
-  height: 500px;
+  max-height: 500px;
 }
 /* line 14, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption {
