@@ -1,3 +1,16 @@
+<% if parent.template == "bargain "%>
+<div class="container"> 
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="product-list-wrapper">
+        <div class="row">
+          <%= render @motorcycles %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% else %>
 <div class="container"> 
   <div class="row">
     <div class="col-xs-12 col-sm-3">
@@ -12,5 +25,6 @@
     </div>
   </div>
 </div>
+<% end %>
 
 
