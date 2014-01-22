@@ -27,6 +27,9 @@ fr:
         first_hand: "Véhicule Neuf" 
         color: "Couleur" 
         color_attributes: "Couleurs"
+      search:
+        with_in_stock: "En stock"
+        
 
   admin:
     motorcycle_lists:

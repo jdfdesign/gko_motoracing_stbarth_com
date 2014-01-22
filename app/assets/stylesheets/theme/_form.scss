@@ -24,7 +24,13 @@ textarea.form-control {
   height: $input-height-large * 3; 
   resize: none;
 }
-
+.boolean .controls {
+display: inline-block;
+}
+.checkbox {
+  display: inline-block;
+  margin-left: 10px;
+}
 span.error,span.valid{
   position: absolute;
   top:0; 

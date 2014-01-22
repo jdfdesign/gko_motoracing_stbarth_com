@@ -1,23 +1,25 @@
 Gko Motoracing Com
 ========================
 
-cd ~/Github/gko_motoracing_stbarth_com
+cd ~/Github/gko_motoracing_com
 tail -f log/development.log
 
-cd ~/Github/gko_motoracing_stbarth_com
+cd ~/Github/gko_motoracing_com
 tail -f log/production.log
 
-cd ~/Github/gko_motoracing_stbarth_com
+
+rvm use 1.8.7 --default
+cd ~/Github/gko_motoracing_com
 bundle install
 rails s
 
 bundle exec rake assets:precompile
 
-cd ~/Github/gko_motoracing_stbarth_com
+cd ~/Github/gko_motoracing_com
 bundle exec rake railties:install:migrations
 bundle exec rake db:migrate
 
-cd ~/Github/gko_motoracing_stbarth_com
+cd ~/Github/gko_motoracing_com
 bundle exec rake railties:install:migrations
 bundle exec rake db:bootstrap --trace
 

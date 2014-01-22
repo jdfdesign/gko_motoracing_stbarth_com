@@ -3,13 +3,7 @@
       :label => false, 
       :required => false,
       :placeholder => 'Nom' %>
-  <%= f.input :with_first_hand,
-      :collection => [["Neuf", 1], ["Occasion", 0]],
-      :as => :select,
-      :label => false, 
-      :required => false,
-      :include_blank => false,
-      :prompt => "Neuf et Occasion" %>
+  <%= f.input :with_in_stock, :as => :boolean %>
   <%= f.input :with_engine_type,
         :collection => Motorcycle::TYPES,
         :as => :select,
@@ -33,3 +27,4 @@
         :prompt => "Toutes les marques" %>  
       <%= f.button 'submit', 'Rechercher', :class => " btn-large btn-primary btn-block" %> 
 <% end %>
+<p>Si vous ne trouvez pas le véhicule que vous recherchez, n’hésitez pas à <a href="#contact-form">nous contacter</a> ou à passer à la boutique MotoRacing</p>

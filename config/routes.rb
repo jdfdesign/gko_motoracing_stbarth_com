@@ -1,6 +1,4 @@
 GkoMotoracingCom::Application.routes.draw do
-  
-  
   get 'motorcycle_lists/:motorcycle_list_id', 
     :to => 'motorcycles#index'
 
