@@ -1,15 +1,29 @@
 
 .navbar {
+  border-bottom: 0;
   .btn-link {
-    color: #fff;
-    text-shadow: none;
-    padding-top: 41px;
-    padding-bottom: 41px;
+    margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
     border-left: 1px solid lighten($navbar-default-bg, 10%);
     border-bottom: 4px solid $navbar-default-bg;
+    color: #fff;
+    text-shadow: none;
     &:hover {
       border-bottom: 4px solid #fff;
       text-decoration: none;
+    }
+    @media (max-width: $screen-xs-max) {
+    
+    }
+
+    // Uncollapse the nav
+    @media (min-width: $grid-float-breakpoint) {
+      float: left;
+      margin: 0;
+      padding-top: (($navbar-height - $line-height-computed) / 2);
+      padding-bottom: (($navbar-height - $line-height-computed) / 2);
     }
   }
   .nav > li > a {
@@ -21,4 +35,14 @@
       border-bottom: 4px solid #fff;
     } 
   }
+}
+
+
+
+.navbar-brand {
+
+  padding-top:    20px;
+  padding-bottom: 10px;
+  //padding-left: 0;
+  padding-right: 0;
 }

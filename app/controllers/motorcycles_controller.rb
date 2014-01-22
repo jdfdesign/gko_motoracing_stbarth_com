@@ -13,7 +13,7 @@ class MotorcyclesController < ContentsController
   protected
   
   def load_resources
-    end_of_association_chain.includes(self.includes).with_globalize
+    end_of_association_chain.includes(self.includes).with_globalize.order('motorcycles.cylinder, motorcycles.price')
   end
 
   def find_resource

@@ -6,6 +6,9 @@
     </div>
     <div class="col-xs-12 col-sm-4">
       <%= page_title(resource.title) %>
+      <%= raw "<p><strong>Référence:</strong> #{resource.brand.name}</p>" if resource.brand %> 
+      <%= raw "<p><strong>Cylindrée:</strong> #{resource.cylinder} cm3</p>" if resource.cylinder %>
+      <%= raw "<p><strong>Référence:</strong> #{resource.name}</p>" if resource.name %> 
       <%= raw "<p><strong>Prix:</strong> #{indivisible_number_to_currency(resource.price)}</p>" if resource.mileage %>
       <%= render_copy_text(resource.body) %> 
       <% if resource.first_hand %>
@@ -21,8 +24,7 @@
         <%= raw "<p><strong>Année de mise en circulation:</strong> #{resource.circulation_year}</p>" if resource.circulation_year %>
         <%= raw "<p><strong>Kilométrage:</strong> #{resource.mileage} km</p>" if resource.mileage %>
       <% end %>
-      <%= raw "<p><strong>Cylindrée:</strong> #{resource.cylinder} cm3</p>" if resource.cylinder %>
-      <%= raw "<p><strong>Référence:</strong> #{resource.name}</p>" if resource.name %> 
+      
     </div> 
   </div>
 </article>

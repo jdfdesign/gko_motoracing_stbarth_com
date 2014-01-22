@@ -254,7 +254,7 @@ $grid-float-breakpoint:     $screen-sm-min;
 // -------------------------
 
 // Basics of a navbar
-$navbar-height:                    100px;//50px;
+$navbar-height:                    $th-brand-logo-height + 40px;//50px;
 $navbar-margin-bottom:             $line-height-computed;
 $navbar-border-radius:             0;//$border-radius-base;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2);

@@ -1,4 +1,5 @@
 $theme-color: #F03C02;
+$th-brand-logo-height: 52px;
 
 @import "theme/variables";
 @import "bootstrap.3.0.2/bootstrap";
@@ -9,7 +10,35 @@ $theme-color: #F03C02;
 @import "theme/carousel";
 @import "theme/home";
 @import "theme/products";
- 
+
+/* FIX FOR IE DEVICE_WIDTH BUG
+-------------------------------------------------- */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+// Color for the placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
+
+/* FIX FOR GMAP BUG
+-------------------------------------------------- */
+#map-canvas {
+  height: 350px;
+  width: 100%;
+  @include box-sizing(content-box);
+  margin-bottom: $line-height-computed;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
 .main {
   padding: 20px 0;
 }
