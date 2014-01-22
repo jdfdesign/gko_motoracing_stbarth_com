@@ -34,7 +34,6 @@
         <p>N’hésitez pas à passer à la boutique Motoracing située au quartier du Roy (Anse des Cayes) à Saint-Barthélemy. Vous y trouverez : scooters, motos et quads neufs, des accessoires et casques, les pièces détachées d’origine, notre atelier de réparation.</p>
         <% if Rails.env.development? || site.preferred_google_map_api_key.present? %>
         <div class="clearfix"><div id="map-canvas"></div></div>
-            <% marker = local_assigns.has_key?(:point) ? point : "17.905198,-62.827539" %> <%# sbh %>
             <script type='text/javascript' src="http://maps.google.com/maps/api/js?key=<%= Rails.env.development? ? 'AIzaSyBV-l_UyG5vlBvMgtz5c9gg1PuKzSSBkUQ' : site.preferred_google_map_api_key %>&sensor=false"></script>
         <% end %>
       </div>

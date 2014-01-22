@@ -10330,6 +10330,16 @@ span.valid {
   max-height: 500px;
 }
 /* line 11, ../../app/assets/stylesheets/theme/_home.scss */
+#home-carousel .carousel-indicators {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 11, ../../app/assets/stylesheets/theme/_home.scss */
+  #home-carousel .carousel-indicators {
+    display: block;
+  }
+}
+/* line 17, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption {
   z-index: 10;
   padding: 0 20px;
@@ -10337,13 +10347,13 @@ span.valid {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  bottom: 80px;
+  bottom: 10px;
 }
-/* line 19, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 25, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption p {
   line-height: 28px;
 }
-/* line 22, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 28, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption hr {
   margin-left: auto;
   margin-right: auto;
@@ -10351,8 +10361,14 @@ span.valid {
   border-top: 1px solid #f03c02;
   border-bottom: none;
 }
+@media (min-width: 768px) {
+  /* line 17, ../../app/assets/stylesheets/theme/_home.scss */
+  #home-carousel .carousel-caption {
+    bottom: 80px;
+  }
+}
 
-/* line 32, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 42, ../../app/assets/stylesheets/theme/_home.scss */
 .icon-128 {
   width: 56px;
   height: 56px;
@@ -10361,17 +10377,16 @@ span.valid {
   line-height: 60px;
 }
 
-/* line 40, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 50, ../../app/assets/stylesheets/theme/_home.scss */
 .section-brands .thumbnail {
   height: 108px;
-  display: table-cell;
-  vertical-align: middle;
   text-align: center;
   margin-bottom: 36px;
   border: none;
 }
-/* line 47, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 55, ../../app/assets/stylesheets/theme/_home.scss */
 .section-brands .thumbnail img {
+  text-align: center;
   max-height: 60px;
   opacity: 0.4;
   filter: alpha(opacity=40);
@@ -10403,7 +10418,6 @@ span.valid {
 /* line 23, ../../app/assets/stylesheets/theme/_products.scss */
 .thumbnail-item > .thumbnail {
   position: relative;
-  min-height: 270px;
 }
 /* line 29, ../../app/assets/stylesheets/theme/_products.scss */
 .thumbnail-item > .thumbnail a:hover, .thumbnail-item > .thumbnail a:focus {
@@ -10462,7 +10476,7 @@ span.valid {
   font-size: 15px;
   color: #000;
   line-height: 18px;
-  margin: 0;
+  margin: 0 0 9px 0;
   padding: 0;
   font-weight: 700;
 }
@@ -10568,25 +10582,26 @@ span.valid {
 
 /* line 82, ../../app/assets/stylesheets/public.css.scss */
 .iconic-scooter {
-  background-position: -80px 0;
+  background-position: -100px 0;
 }
 
 /* line 85, ../../app/assets/stylesheets/public.css.scss */
 .iconic-moto {
-  background-position: -160px 0;
+  background-position: -180px 0;
 }
 
 /* line 88, ../../app/assets/stylesheets/public.css.scss */
 .iconic-quad {
-  background-position: -240px 0;
+  background-position: -260px 0;
 }
 
 /* line 91, ../../app/assets/stylesheets/public.css.scss */
 .iconic-ssv {
   background-position: 0 0;
+  width: 100px;
 }
 
-/* line 94, ../../app/assets/stylesheets/public.css.scss */
+/* line 95, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs > li, .nav-pills > li {
   float: none;
   display: inline-block;
@@ -10596,17 +10611,17 @@ span.valid {
   /* hasLayout ie7 trigger */
 }
 
-/* line 101, ../../app/assets/stylesheets/public.css.scss */
+/* line 102, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs, .nav-pills {
   text-align: center;
 }
 
-/* line 104, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs {
   text-align: center;
 }
 
-/* line 108, ../../app/assets/stylesheets/public.css.scss */
+/* line 109, ../../app/assets/stylesheets/public.css.scss */
 .grid .title {
   font-size: 17px;
   line-height: 26px;

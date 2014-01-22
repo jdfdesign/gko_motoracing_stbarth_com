@@ -8,6 +8,12 @@
   .item {
     max-height: 500px;
   }
+  .carousel-indicators {
+    display: none;
+    @media (min-width: $grid-float-breakpoint) {
+      display: block;
+    }
+  }
   .carousel-caption {
     z-index: 10;
     padding: 0 20px;
@@ -15,7 +21,7 @@
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
-    bottom: 80px;
+    bottom: 10px;
     p {
       line-height: 28px;
     }
@@ -26,7 +32,11 @@
       border-top: 1px solid $theme-color;
       border-bottom: none;
     }
+    @media (min-width: $grid-float-breakpoint) {
+      bottom: 80px;
+    }
   }
+  
 }
 
 .icon-128 {
@@ -39,12 +49,11 @@
 .section-brands { 
   .thumbnail {
     height: $line-height-computed * 6;
-    display: table-cell;
-    vertical-align: middle;
     text-align: center; 
     margin-bottom: $line-height-computed * 2;
     border: none;
     img {
+      text-align: center; 
       max-height: 60px;
       @include opacity(.4);
       @include center-block();
