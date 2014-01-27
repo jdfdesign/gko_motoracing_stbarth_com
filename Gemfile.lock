@@ -1,12 +1,14 @@
-GIT
-  remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 618eeaae867e9ec84eede2ca86c7abe24ab9b9ea
-  tag: v0.8.09.rc18
+PATH
+  remote: ~/Github/gko_cms3/gko_auth
   specs:
-    gko_auth (0.8.09.rc18)
+    gko_auth (0.8.09.rc19)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_core (0.8.09.rc18)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_core
+  specs:
+    gko_core (0.8.09.rc19)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
@@ -48,11 +50,23 @@ GIT
       uglifier (~> 2.4.0)
       uuid (~> 2.3.7)
       will_paginate (~> 3.0.2)
-    gko_documents (0.8.09.rc18)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_documents
+  specs:
+    gko_documents (0.8.09.rc19)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.8.09.rc18)
-    gko_inquiries (0.8.09.rc18)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_features
+  specs:
+    gko_features (0.8.09.rc19)
+
+PATH
+  remote: ~/Github/gko_cms3/gko_inquiries
+  specs:
+    gko_inquiries (0.8.09.rc19)
       filters_spam (~> 0.2)
 
 GEM
