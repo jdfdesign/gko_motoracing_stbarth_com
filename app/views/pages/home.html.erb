@@ -1,4 +1,5 @@
 <% @catalog = site.motorcycle_lists.first %>
+<% @bargain = site.motorcycle_lists.named("bargain") %>
 
 <div class="carousel slide" id="home-carousel">
   <!-- Carousel indicator --> 
@@ -80,13 +81,17 @@
       </figure>
       <h3>Vente neuf et occasion</h3>
       <p>Motoracing propose une sélection de scooters, quads, motos et SSV adaptés aux routes de Saint-Barth pour tous les budgets, disponibles immédiatement ou sur commande.<br/>Pour les Occasions consultez régulièrement notre site ou rendez-nous visite à la boutique.</p>
+      <p>
+        <%= link_to("Nos véhicules neufs", @catalog.public_url) %><br/>
+        <%= link_to("Nos véhicules d'occasion", @bargain.public_url) %>
+      </p>
     </div> 
     <div class="col-sm-3"> 
       <figure>
         <i class="icon-ambulance icon-128"></i>
       </figure>
       <h3>Dépannage</h3>
-      <p>Vous êtes en panne ? Appelez le 0590&nbsp;29&nbsp;86&nbsp;30. Motoracing assure un service de dépannage et de remorquage de votre scooter, moto ou quad jusqu’à l’atelier pour une réparation dans les règles de l’art.</p>
+      <p>Vous êtes en panne ? Appelez le 0590&nbsp;29&nbsp;86&nbsp;30.<br/>Motoracing assure un service de dépannage et de remorquage de votre scooter, moto ou quad jusqu’à l’atelier pour une réparation dans les règles de l’art.</p>
     </div>
     <div class="col-sm-3"> 
       <figure>
