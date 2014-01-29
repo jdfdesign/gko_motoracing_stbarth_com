@@ -1,31 +1,30 @@
 <% @catalog = site.motorcycle_lists.first %>
 <% @bargain = site.motorcycle_lists.named("bargain") %>
-
-<div class="carousel slide" id="home-carousel">
-  <!-- Carousel indicator --> 
-  <ol class="carousel-indicators">
+  <div class="carousel slide" id="home-carousel">
+    <!-- Carousel indicator --> 
+    <ol class="carousel-indicators">
+      <% resource.images.each_with_index do |img, index| %>
+        <li data-target="#home-carousel" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+      <% end %>
+    </ol>
+    <div class="carousel-inner">
     <% resource.images.each_with_index do |img, index| %>
-      <li data-target="#home-carousel" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
-    <% end %>
-  </ol>
-  <div class="carousel-inner">
-  <% resource.images.each_with_index do |img, index| %>
-    <div class="item <%= 'active' if index == 0 %>">
-      <%= image_fu(img, "1400x800#", :rel => "external") %> 
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>MotoRacing</h1>
-          <hr>
-          <p class="lead">Spécialistes du 2 roues et quads à St-Barth</p>
+      <div class="item <%= 'active' if index == 0 %>" style="background-image: url(<%= img.url %>);">
+        <%#= image_fu(img, "1400x800#", :rel => "external") %> 
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>MotoRacing</h1>
+            <hr>
+            <p class="lead">Spécialistes du 2 roues et quads à St-Barth</p>
+          </div>
         </div>
       </div>
+    <% end %>
     </div>
-  <% end %>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#home-carousel" data-slide="prev"><icon class="icon-angle-left"></i></a>
+    <a class="carousel-control right" href="#home-carousel" data-slide="next"><icon class="icon-angle-right"></i></a>
   </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#home-carousel" data-slide="prev"><icon class="icon-angle-left"></i></a>
-  <a class="carousel-control right" href="#home-carousel" data-slide="next"><icon class="icon-angle-right"></i></a>
-</div>
 <section class="section-title">
   <div class="container"> 
     <div class="row">
@@ -80,25 +79,22 @@
         <i class="icon-money icon-128"></i>
       </figure>
       <h3>Vente neuf et occasion</h3>
-      <p>Motoracing propose une sélection de scooters, quads, motos et SSV adaptés aux routes de Saint-Barth pour tous les budgets, disponibles immédiatement ou sur commande.<br/>Pour les Occasions consultez régulièrement notre site ou rendez-nous visite à la boutique.</p>
-      <p>
-        <%= link_to("Nos véhicules neufs", @catalog.public_url) %><br/>
-        <%= link_to("Nos véhicules d'occasion", @bargain.public_url) %>
-      </p>
+      <p><%= raw "Motoracing propose une #{link_to('sélection de scooters, quads, motos et SSV', @catalog.public_url)} adaptés aux routes de Saint-Barth pour tous les budgets, disponibles immédiatement ou sur commande.<br/>
+        Pour #{link_to('les occasions', @bargain.public_url)} consultez régulièrement notre site ou rendez-nous visite à la boutique." %></p>
     </div> 
     <div class="col-sm-3"> 
       <figure>
         <i class="icon-ambulance icon-128"></i>
       </figure>
       <h3>Dépannage</h3>
-      <p>Vous êtes en panne ? Appelez le 0590&nbsp;29&nbsp;86&nbsp;30.<br/>Motoracing assure un service de dépannage et de remorquage de votre scooter, moto ou quad jusqu’à l’atelier pour une réparation dans les règles de l’art.</p>
+      <p>Vous êtes en panne ?<br/>Appelez le 0590&nbsp;29&nbsp;86&nbsp;30.<br/>Motoracing assure un service de dépannage et de remorquage de votre scooter, moto ou quad jusqu’à l’atelier pour une réparation dans les règles de l’art.</p>
     </div>
     <div class="col-sm-3"> 
       <figure>
         <i class="icon-wrench icon-128"></i>
       </figure>
       <h3>Atelier de réparation</h3>
-      <p>Dans notre atelier équipé de 2 bancs, nous assurons le service après-vente et la réparation de tous les deux roues et quads toutes marques, avec des pièces d’origine constructeur.</p>
+      <p>Dans notre atelier équipé de 3 bancs, nous assurons le service après-vente et la réparation de tous les deux roues et quads toutes marques, avec des pièces d’origine constructeur.</p>
     </div>
     <div class="col-sm-3">
       <figure>

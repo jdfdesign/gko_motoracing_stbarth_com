@@ -10295,27 +10295,36 @@ span.valid {
 /* line 1, ../../app/assets/stylesheets/theme/_carousel.scss */
 .carousel-control {
   border-radius: 0;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #000;
-  top: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 30px;
-  line-height: 60px;
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-/* line 14, ../../app/assets/stylesheets/theme/_carousel.scss */
-.carousel-control:hover, .carousel-control:focus {
+  border: 1px solid #000;
   background-color: #000;
   color: #fff;
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: -15px;
   opacity: 1;
   filter: alpha(opacity=100);
 }
-/* line 20, ../../app/assets/stylesheets/theme/_carousel.scss */
+/* line 15, ../../app/assets/stylesheets/theme/_carousel.scss */
+.carousel-control:hover, .carousel-control:focus {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+/* line 19, ../../app/assets/stylesheets/theme/_carousel.scss */
 .carousel-control.right, .carousel-control.left {
   background-image: none;
+}
+@media (min-width: 768px) {
+  /* line 1, ../../app/assets/stylesheets/theme/_carousel.scss */
+  .carousel-control {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    margin-top: -30px;
+  }
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -10327,19 +10336,40 @@ span.valid {
 }
 /* line 8, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .item {
-  max-height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 }
-/* line 11, ../../app/assets/stylesheets/theme/_home.scss */
+@media (min-width: 768px) {
+  /* line 8, ../../app/assets/stylesheets/theme/_home.scss */
+  #home-carousel .item {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 8, ../../app/assets/stylesheets/theme/_home.scss */
+  #home-carousel .item {
+    height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 8, ../../app/assets/stylesheets/theme/_home.scss */
+  #home-carousel .item {
+    height: 600px;
+  }
+}
+/* line 27, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-indicators {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 11, ../../app/assets/stylesheets/theme/_home.scss */
+  /* line 27, ../../app/assets/stylesheets/theme/_home.scss */
   #home-carousel .carousel-indicators {
     display: block;
   }
 }
-/* line 17, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 35, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption {
   z-index: 10;
   padding: 0 20px;
@@ -10349,11 +10379,11 @@ span.valid {
   letter-spacing: 1px;
   bottom: 10px;
 }
-/* line 25, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 43, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption p {
   line-height: 28px;
 }
-/* line 28, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 46, ../../app/assets/stylesheets/theme/_home.scss */
 #home-carousel .carousel-caption hr {
   margin-left: auto;
   margin-right: auto;
@@ -10362,13 +10392,13 @@ span.valid {
   border-bottom: none;
 }
 @media (min-width: 768px) {
-  /* line 17, ../../app/assets/stylesheets/theme/_home.scss */
+  /* line 35, ../../app/assets/stylesheets/theme/_home.scss */
   #home-carousel .carousel-caption {
     bottom: 80px;
   }
 }
 
-/* line 42, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 60, ../../app/assets/stylesheets/theme/_home.scss */
 .icon-128 {
   width: 56px;
   height: 56px;
@@ -10377,14 +10407,14 @@ span.valid {
   line-height: 60px;
 }
 
-/* line 50, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 68, ../../app/assets/stylesheets/theme/_home.scss */
 .section-brands .thumbnail {
   height: 108px;
   text-align: center;
   margin-bottom: 36px;
   border: none;
 }
-/* line 55, ../../app/assets/stylesheets/theme/_home.scss */
+/* line 73, ../../app/assets/stylesheets/theme/_home.scss */
 .section-brands .thumbnail img {
   max-height: 100px;
   vertical-align: middle;

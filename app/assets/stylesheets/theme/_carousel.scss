@@ -1,23 +1,30 @@
 .carousel-control {
   border-radius: 0;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #000;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
   top: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 30px;
-  line-height: 60px;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: -15px;
   @include opacity(1); 
   // Hover/focus state
   &:hover,
   &:focus {
-    background-color: #000;
-    color: #fff;
-    @include opacity(1);
+    @include opacity(.7);
   }
   &.right,
   &.left {
     background-image: none;
+  }
+  
+  @media (min-width: $screen-sm) {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    line-height: 60px;
+    margin-top: -30px;
   }
 }

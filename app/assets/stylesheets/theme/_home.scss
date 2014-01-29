@@ -6,13 +6,31 @@
   margin-bottom: 0;
 
   .item {
-    max-height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    
+    @media (min-width: $screen-sm) {
+      height: 400px;
+    }
+  
+    @media (min-width: $screen-md) {
+      height: 500px;
+    }
+  
+    @media (min-width: $screen-lg-min) {
+      height: 600px;
+    }
   }
+
   .carousel-indicators {
     display: none;
+    
     @media (min-width: $grid-float-breakpoint) {
       display: block;
     }
+    
   }
   .carousel-caption {
     z-index: 10;
