@@ -15,10 +15,10 @@
     <%= f.input :cylinder, 
                 :collection => Motorcycle::CYLINDERS,
                 :as => :select %>
-    <%= f.input :price %>
+    <%#= f.input :price %>
     <%= f.input :first_hand %>
     <div id="new_engine_container" class="<%= 'hide' unless f.object.first_hand %>"> 
-      <%= f.input :in_stock %>
+      <%#= f.input :in_stock %>
       <%= render 'colors', :f => f %> 
     </div>
     <div id="used_engine_container" class="<%= 'hide' if f.object.first_hand %>">

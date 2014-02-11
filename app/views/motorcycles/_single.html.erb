@@ -8,10 +8,10 @@
       <%= page_title(resource.title) %>
       <%= raw "<p><strong>Marque:</strong> #{resource.brand.name}</p>" if resource.brand %> 
       <%= raw "<p><strong>Cylindrée:</strong> #{resource.cylinder} cm3</p>" if resource.cylinder %>
-      <%= raw "<p><strong>Prix:</strong> #{indivisible_number_to_currency(resource.price)}</p>" if resource.price %>
+      <%#= raw "<p><strong>Prix:</strong> #{indivisible_number_to_currency(resource.price)}</p>" if resource.price %>
       <%= render_copy_text(resource.body) %> 
       <% if resource.first_hand %>
-        <%= raw "<p><strong><em>Sur Commande</em></strong></p>" if !resource.in_stock %>
+        <%#= raw "<p><strong><em>Sur Commande</em></strong></p>" if !resource.in_stock %>
         <% if resource.colors.any? %>
           <%= raw "<p><strong>Ce produit existe dans les couleurs suivantes : </strong></p>" %>
           <% resource.colors.each do |color| %>
