@@ -1,3 +1,4 @@
+<% collection_row_cache(motorcycle) do %>
 <article class="col-xs-6 col-sm-4 thumbnail-item">
   <div class="thumbnail">
   <%= link_to(motorcycle.public_url) do %>
@@ -11,4 +12,5 @@
   <% end %>
   </div>
 </article>
+<% end if motorcycle %>
 
