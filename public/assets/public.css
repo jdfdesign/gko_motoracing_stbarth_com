@@ -10327,6 +10327,14 @@ span.valid {
   }
 }
 
+/* line 1, ../../app/assets/stylesheets/theme/_throbber.scss */
+.thumbnail-throbber {
+  min-height: 80px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0idGhyb2JiZXJfaW1hZ2UiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIj48cGF0aCBkPSJNIDE1MCwwIGEgMTUwLDE1MCAwIDAsMSAxMDYuMDY2LDI1Ni4wNjYgbCAtMzUuMzU1LC0zNS4zNTUgYSAtMTAwLC0xMDAgMCAwLDAgLTcwLjcxMSwtMTcwLjcxMSB6IiBmaWxsPSIjNDRDQkY4Ij48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIGF0dHJpYnV0ZVR5cGU9IlhNTCIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDE1MCAxNTAiIHRvPSIzNjAgMTUwIDE1MCIgYmVnaW49IjBzIiBkdXI9Ii41cyIgZmlsbD0iZnJlZXplIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz48L3BhdGg+PC9zdmc+);
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* line 4, ../../app/assets/stylesheets/theme/_home.scss */
@@ -10533,14 +10541,14 @@ span.valid {
   width: device-width;
 }
 
-/* line 23, ../../app/assets/stylesheets/public.css.scss */
+/* line 24, ../../app/assets/stylesheets/public.css.scss */
 .placeholder {
   color: #999999;
 }
 
 /* FIX FOR GMAP BUG
 -------------------------------------------------- */
-/* line 29, ../../app/assets/stylesheets/public.css.scss */
+/* line 30, ../../app/assets/stylesheets/public.css.scss */
 #map-canvas {
   height: 350px;
   width: 100%;
@@ -10549,7 +10557,7 @@ span.valid {
   box-sizing: content-box;
   margin-bottom: 18px;
 }
-/* line 34, ../../app/assets/stylesheets/public.css.scss */
+/* line 35, ../../app/assets/stylesheets/public.css.scss */
 #map-canvas img {
   max-width: none;
   vertical-align: middle;
@@ -10557,23 +10565,23 @@ span.valid {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
+/* line 43, ../../app/assets/stylesheets/public.css.scss */
 .main {
   padding: 20px 0;
 }
 
-/* line 45, ../../app/assets/stylesheets/public.css.scss */
+/* line 46, ../../app/assets/stylesheets/public.css.scss */
 .container.register {
   background-color: #f03c02;
   color: #fff;
 }
-/* line 48, ../../app/assets/stylesheets/public.css.scss */
+/* line 49, ../../app/assets/stylesheets/public.css.scss */
 .container.register h3 {
   display: inline-block;
   margin-right: 20px;
 }
 
-/* line 54, ../../app/assets/stylesheets/public.css.scss */
+/* line 55, ../../app/assets/stylesheets/public.css.scss */
 .section-title {
   color: #f03c02;
   text-align: center;
@@ -10582,26 +10590,26 @@ span.valid {
   padding-bottom: 18px;
 }
 
-/* line 61, ../../app/assets/stylesheets/public.css.scss */
+/* line 62, ../../app/assets/stylesheets/public.css.scss */
 .section-content {
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
-/* line 66, ../../app/assets/stylesheets/public.css.scss */
+/* line 67, ../../app/assets/stylesheets/public.css.scss */
 .section-footer {
   background-color: #333333;
   color: #999999;
   padding-top: 18px;
   padding-bottom: 18px;
 }
-/* line 71, ../../app/assets/stylesheets/public.css.scss */
+/* line 72, ../../app/assets/stylesheets/public.css.scss */
 .section-footer h3 {
   color: #fff;
 }
 
-/* line 75, ../../app/assets/stylesheets/public.css.scss */
+/* line 76, ../../app/assets/stylesheets/public.css.scss */
 .iconic {
   background-image: url(/assets/icons-vehicule.png);
   width: 80px;
@@ -10610,28 +10618,28 @@ span.valid {
   margin-right: auto;
 }
 
-/* line 82, ../../app/assets/stylesheets/public.css.scss */
+/* line 83, ../../app/assets/stylesheets/public.css.scss */
 .iconic-scooter {
   background-position: -100px 0;
 }
 
-/* line 85, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
 .iconic-moto {
   background-position: -180px 0;
 }
 
-/* line 88, ../../app/assets/stylesheets/public.css.scss */
+/* line 89, ../../app/assets/stylesheets/public.css.scss */
 .iconic-quad {
   background-position: -260px 0;
 }
 
-/* line 91, ../../app/assets/stylesheets/public.css.scss */
+/* line 92, ../../app/assets/stylesheets/public.css.scss */
 .iconic-ssv {
   background-position: 0 0;
   width: 100px;
 }
 
-/* line 95, ../../app/assets/stylesheets/public.css.scss */
+/* line 96, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs > li, .nav-pills > li {
   float: none;
   display: inline-block;
@@ -10641,17 +10649,17 @@ span.valid {
   /* hasLayout ie7 trigger */
 }
 
-/* line 102, ../../app/assets/stylesheets/public.css.scss */
+/* line 103, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs, .nav-pills {
   text-align: center;
 }
 
-/* line 105, ../../app/assets/stylesheets/public.css.scss */
+/* line 106, ../../app/assets/stylesheets/public.css.scss */
 .nav-tabs {
   text-align: center;
 }
 
-/* line 109, ../../app/assets/stylesheets/public.css.scss */
+/* line 110, ../../app/assets/stylesheets/public.css.scss */
 .grid .title {
   font-size: 17px;
   line-height: 26px;

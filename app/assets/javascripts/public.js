@@ -1,7 +1,10 @@
 //= require jquery_ujs
+//= require jquery.imagesloaded
+//= require jquery.equalheight
 //= require remote_form
 //= require jquery.placeholder
 //= require jquery.easing
+
 
 // make console.log safe to use
 window.console || (console = {
@@ -37,27 +40,15 @@ jQuery(function($){
     $('input, textarea').placeholder();
   };
 
-  /* ==================================================
-  	Placeholder
-  ================================================== */
-  THEME.uniformHeight = function () {
-    var maxHeight = 0,
-        wrapper,
-        wrapperHeight;
-
-    $('.thumbnails').find('.thumbnail').each(function () {
-
-      // Applying a wrapper to the contents of the current element to get reliable height
-      wrapper = $(this).wrapInner('<div class="wrapper" />').children('.wrapper');
-      wrapperHeight = wrapper.outerHeight();
-
-      maxHeight = Math.max(maxHeight, wrapperHeight);
-      
-      // Remove the wrapper
-      wrapper.children().unwrap();
-
-    }).height(maxHeight);
-  }
+  // EQUAL HEIGHT COLUMNS
+  // ==================================================
+  
+  THEME.equalHeight = function() {
+    $('.js-uniformHeight').each(function() {
+      $(this).find(".thumbnail").uniformHeight();
+    })
+  };
+  
   /* ==================================================
   	Carousel
   ================================================== */
@@ -86,72 +77,6 @@ jQuery(function($){
       })
     };
 
-  /* ==================================================
-    	Navigation
-    ================================================== */
-    THEME.navigation = function() {
-      
-      var navbarHeight = $('.navbar').height();
-      $(window).bind('scroll', function () {
-        var scrollTop = jQuery(window).scrollTop();
-        scrollTop >= $(window).height() - navbarHeight ? $(".navbar").addClass("fixed") : $(".navbar").removeClass("fixed");
-      });
-      
-      $('.navbar-nav li').on("click", function(e) {
-        var target = $("#" + $(this).attr('id') + "_page"),
-            navbarHeight = $('.navbar').height();
-        console.log(target);
-        $(this).parent().find('li').removeClass('active');
-        $(this).addClass('active');
-
-        if ($(window).width() <= 767) {
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top - navbarHeight
-          }, 1500, 'easeInOutExpo');
-        } else {
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top - navbarHeight
-          }, 1500, 'easeInOutExpo');
-        }
-
-        e.preventDefault();
-      })
-      
-      
-    }
-  /* ==================================================
-    	Scroll to Top
-    ================================================== */
-
-    THEME.scrollToTop = function() {
-      var didScroll = false;
-
-      var $arrow = $('#back-to-top');
-
-      $arrow.click(function(e) {
-        $('body,html').animate({
-          scrollTop: "0"
-        }, 750, 'easeOutExpo');
-        e.preventDefault();
-      });
-
-      $(window).scroll(function() {
-        didScroll = true;
-      });
-
-      setInterval(function() {
-        if (didScroll) {
-          didScroll = false;
-
-          if ($(window).scrollTop() > 1000) {
-            $arrow.css('display', 'block');
-          } else {
-            $arrow.css('display', 'none');
-          }
-        }
-      }, 250);
-    };
-    
     /* ==================================================
       	Gmap
       ================================================== */
@@ -208,19 +133,28 @@ jQuery(function($){
 
   $(document).ready(function() {
     THEME.fix();
-    //THEME.anim(); 
-    //THEME.textCenter();
-    //THEME.navigation();
-    //THEME.scrollToTop();
     THEME.placeholder();
     THEME.carousel();
     if(typeof(google) != 'undefined'){
       THEME.gmap();
     }
-    THEME.uniformHeight();
+    // LAZY LOAD
+    // ==================================================
+    
+    // add a throbber to thumbnail image while loading
+    $(".js-lazyload").find("img").hide().wrap('<div class="thumbnail-throbber" />');
+    
+    // Check image loaded to adjust thmbnails height
+    $('.js-lazyload').imagesLoaded()
+    .progress( function( instance, image ) {
+      var result = image.isLoaded ? 'loaded' : 'broken';
+      //console.log( 'image is ' + result + ' for ' + image.img.src );
+      $(image.img).fadeTo(500, 1).unwrap();
+      THEME.equalHeight();
+    });
 
     $(window).resize(function () {
-        THEME.uniformHeight();
+        THEME.equalHeight();
     });
   });
 }); 

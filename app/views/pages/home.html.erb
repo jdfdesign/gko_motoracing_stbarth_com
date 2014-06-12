@@ -63,6 +63,20 @@
     </div>
   </div>
 </div>
+<section class="section-content">
+  <div class="container"> 
+    <div class="row text-left">
+      <div class="col-sm-3">
+        <%= image_tag("icon-jetski.png", :class => "img-responsive") %>
+      </div>
+      <div class="col-sm-9">
+        <h3>Jet Ski</h3>
+        <p>Motoracing propose toute la gamme des JETSKIS SEA•DOO BRP : Une gamme complète allant du petit Jetski ludique comme le Sea•Doo SPARK 2 places aux modèles plus musclés comme le GTI SE 155, le WAKE Pro 215 spécialement étudié pour pratique le WakeBoard ou les modèles plus luxueux comme le GTX Limited iS 260…</p>
+        <a class="btn btn-link" href="<%= @catalog.public_url %>?search%5Bwith_engine_type%5D=jetski"><i class="icon-search"></i> Trouver un jet ski</a>
+      </div>
+    </div> 
+  </div>
+</section>
 <section class="section-title">
   <div class="container"> 
     <div class="row">
@@ -94,7 +108,7 @@
         <i class="icon-wrench icon-128"></i>
       </figure>
       <h3>Atelier de réparation</h3>
-      <p>Dans notre atelier équipé de 3 bancs, nous assurons le service après-vente et la réparation de tous les deux roues et quads toutes marques, avec des pièces d’origine constructeur.</p>
+      <p>Dans notre atelier équipé de 3 bancs, nous assurons le service après-vente et la réparation de tous les deux roues et quads des marques que nous représentons, avec pièces d’origine constructeur.</p>
     </div>
     <div class="col-sm-3">
       <figure>
@@ -116,21 +130,28 @@
 </section>
 <div class="container section-content"> 
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-6 col-sm-3">
       <figure>
         <i class="icon-user icon-128"></i>
       </figure>
       <h3>Thierry</h3>
       <p>Atelier-boutique</p>
     </div> 
-    <div class="col-xs-12 col-sm-4"> 
+    <div class="col-xs-6 col-sm-3"> 
       <figure>
         <i class="icon-user icon-128"></i>
       </figure>
       <h3>Jérôme</h3>
       <p>Atelier</p>
     </div>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-6 col-sm-3"> 
+      <figure>
+        <i class="icon-user icon-128"></i>
+      </figure>
+      <h3>Teddy</h3>
+      <p>Atelier</p>
+    </div>
+    <div class="col-xs-6 col-sm-3">
       <figure>
         <i class="icon-user icon-128"></i>
       </figure>
@@ -150,8 +171,8 @@
 </section>
 <div class="container section-content section-brands"> 
   <div class="row">
-    <% ["Quadro","Kymco","Ktm","Derbi","Sym"].each do |brand| %>
-    <div class="col-xs-6 col-sm-3 col-md-2 col-offset-md-2">
+    <% ["Quadro","Kymco","Ktm","Derbi","Sym", "Seadoo-brp"].each do |brand| %>
+    <div class="col-xs-6 col-sm-3 col-md-2">
       <div class="thumbnail">
         <%= image_tag("#{brand}.png", :alt => brand, :class => "img-responsive") %>
       </div>
