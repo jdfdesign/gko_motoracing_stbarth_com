@@ -8,15 +8,7 @@ group :assets do
 end
 
 group :production do
-<<<<<<< HEAD
-<<<<<<< HEAD
   git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.12.5" do
-=======
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.09.rc25" do
->>>>>>> FETCH_HEAD
-=======
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.09.rc25" do
->>>>>>> FETCH_HEAD
 	  gem "gko_core"
 	  gem "gko_auth"
 	  gem "gko_documents"
