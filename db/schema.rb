@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140610113423) do
+ActiveRecord::Schema.define(:version => 20140617134500) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -41,12 +41,14 @@ ActiveRecord::Schema.define(:version => 20140610113423) do
   add_index "brands", ["site_id"], :name => "index_brands_on_site"
 
   create_table "colors", :force => true do |t|
-    t.integer "motorcycle_id", :null => false
+    t.integer "engine_id",   :null => false
     t.string  "hex"
     t.string  "name"
+    t.string  "engine_type"
   end
 
-  add_index "colors", ["motorcycle_id"], :name => "index_colors_on_motorcycle"
+  add_index "colors", ["engine_id", "engine_type"], :name => "index_colors_on_engine_id_and_engine_type"
+  add_index "colors", ["engine_id"], :name => "index_colors_on_motorcycle"
 
   create_table "content_translations", :force => true do |t|
     t.integer  "content_id"
@@ -252,6 +254,46 @@ ActiveRecord::Schema.define(:version => 20140610113423) do
     t.text     "options"
     t.integer  "site_id"
   end
+
+  create_table "jetski_translations", :force => true do |t|
+    t.integer  "jetski_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "body"
+    t.string   "meta_description"
+    t.string   "slug"
+    t.string   "meta_title"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "jetski_translations", ["jetski_id"], :name => "index_jetski_translations_on_jetski_id"
+  add_index "jetski_translations", ["locale"], :name => "index_jetski_translations_on_locale"
+
+  create_table "jetskis", :force => true do |t|
+    t.integer  "section_id",       :null => false
+    t.integer  "site_id",          :null => false
+    t.integer  "brand_id"
+    t.text     "body"
+    t.string   "title"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.string   "slug"
+    t.string   "name"
+    t.string   "engine_type"
+    t.integer  "cylinder"
+    t.integer  "circulation_year"
+    t.integer  "mileage"
+    t.integer  "price"
+    t.boolean  "in_stock"
+    t.boolean  "first_hand"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "jetskis", ["section_id"], :name => "index_jetskis_on_section"
+  add_index "jetskis", ["site_id"], :name => "index_jetskis_on_brand"
+  add_index "jetskis", ["site_id"], :name => "index_jetskis_on_site"
 
   create_table "languages", :force => true do |t|
     t.integer  "site_id"

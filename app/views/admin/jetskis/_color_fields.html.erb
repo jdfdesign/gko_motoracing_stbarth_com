@@ -1,0 +1,11 @@
+<tr class="product_color fields">
+  <td class='color_name'>
+	<%= f.text_field :name %>
+  </td>
+  <td class='color_hex'>
+    <%= f.text_field :hex, :class => 'color-field' %>
+  </td>
+  <td class="actions">
+    <%= icon_to_remove_fields(f) %>
+  </td>
+</tr>

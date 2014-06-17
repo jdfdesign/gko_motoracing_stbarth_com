@@ -1,0 +1,44 @@
+<ul class="nav nav-tabs">
+  <%= li_tab_for("#content-basic-tab", t(:'admin.fieldset.general_informations'), 'active') %> 
+  <%= li_tab_for("#content-images-tab", t(:'admin.fieldset.images')) %>
+  <%= li_tab_for("#content-seo-tab", t(:'admin.fieldset.seo')) %>
+</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="content-basic-tab">
+	  <%##= f.input :engine_type, 
+                :collection => Jetski::TYPES,
+                :as => :radio_buttons, 
+                :item_wrapper_class => 'inline' %>      
+	  <%= f.input :title %>
+    <%= f.input :body, :as => :text, :input_html => {:class => 'wysihtml5 basic-toolbar', :rows => 8} %> 
+    <%= f.association :brand, :collection => current_site.brands, :include_blank => true %>
+    <%= f.input :cylinder, 
+                :collection => Jetski::CYLINDERS,
+                :as => :select %>
+    <%#= f.input :price %>
+    <%= f.input :first_hand %>
+    <div id="new_engine_container" class="<%= 'hide' unless f.object.first_hand %>"> 
+      <%#= f.input :in_stock %>
+      <%= render 'colors', :f => f %> 
+    </div>
+    <div id="used_engine_container" class="<%= 'hide' if f.object.first_hand %>">
+      <%= f.input :circulation_year %>
+      <%= f.input :mileage %>
+    </div>
+  </div>
+  <div class="tab-pane" id="content-images-tab">
+	<%= render 'form_image_assignments', :f => f %>
+	</div>
+  <div class="tab-pane" id="content-seo-tab">
+	  <%= render 'form_seo_fields', :f => f %>
+  </div>  
+</div>   
+
+<script type="text/javascript">
+  $( "#motorcycle_first_hand" ).change(function() {
+    $("#new_engine_container").toggle();
+    $("#used_engine_container").toggle();
+  });
+</script>
+
+         

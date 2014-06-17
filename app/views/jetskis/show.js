@@ -1,0 +1,1 @@
+$("#product-wrapper").html("<%= escape_javascript(render 'single') %>").show(500)    

@@ -1,0 +1,30 @@
+<%= simple_form_for(:search, :url => @section.public_url, :remote => true, :html => {:method => :get, :class => "products-filter" }) do |f| %> 
+  <%= f.input :with_title,
+      :label => false, 
+      :required => false,
+      :placeholder => 'Nom' %>
+  <%#= f.input :with_in_stock, :as => :boolean %>
+  <%#= f.input :with_engine_type,
+        :collection => Jetski::TYPES,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Tous les types" %>
+  <%= f.input :with_cylinder,
+        :collection => Jetski::CYLINDERS,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Tous les cylindrées" %>
+  <%#= f.input :with_brand,
+        :collection => site.brands.all,
+        :as => :select,
+        :label => false,
+        :required => false,
+        :include_blank => false,
+        :prompt => "Toutes les marques" %>  
+      <%= f.button 'submit', 'Rechercher', :class => " btn-large btn-primary btn-block" %> 
+<% end %>
+<p>Si vous ne trouvez pas le véhicule que vous recherchez, n’hésitez pas à <a href="#contact-form">nous contacter</a> ou à passer à la boutique MotoRacing</p>
