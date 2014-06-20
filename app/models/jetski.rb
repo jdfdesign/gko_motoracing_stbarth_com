@@ -1,7 +1,7 @@
 class Jetski < ActiveRecord::Base
 
   #TYPES = ["Scooter","Moto", "Quad", "SSV", "Jet Ski"]
-  CYLINDERS = [50,80,100,125,150,200,250,300,350,390,400,450,465,500,550,600,690,700]
+  CYLINDERS = [60,80,130,155,215,260]
   TRANSLATED_FIELD = [
     :title, :body, :meta_description, :meta_title, :slug
   ].freeze
