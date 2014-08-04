@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140617134500) do
+ActiveRecord::Schema.define(:version => 20140804082307) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -236,6 +236,7 @@ ActiveRecord::Schema.define(:version => 20140617134500) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_uid"
+    t.string   "video_url"
   end
 
   create_table "inquiries", :force => true do |t|

@@ -14,10 +14,18 @@ GkoMotoracingCom::Application.routes.draw do
   namespace :admin do
     resources :sites do
       resources :motorcycle_lists do
-        resources :motorcycles
+        resources :motorcycles do
+          collection do
+            get :selected
+          end
+        end
       end
       resources :jetski_lists do
-        resources :jetskis
+        resources :jetskis do
+          collection do
+            get :selected
+          end
+        end
       end
     end
   end

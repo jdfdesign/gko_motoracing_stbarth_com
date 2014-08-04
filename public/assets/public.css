@@ -10105,8 +10105,9 @@ a .icon-flip-vertical:before {
   border-bottom: 4px solid #f03c02;
   color: #fff;
   text-shadow: none;
+  font-size: 12px;
 }
-/* line 13, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 14, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .btn-link:hover {
   border-bottom: 4px solid #fff;
   text-decoration: none;
@@ -10120,19 +10121,20 @@ a .icon-flip-vertical:before {
     padding-bottom: 37px;
   }
 }
-/* line 29, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 30, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .nav > li > a {
   text-transform: uppercase;
   font-weight: 700;
   border-left: 1px solid #fd5c28;
   border-bottom: 4px solid #f03c02;
+  font-size: 12px;
 }
-/* line 34, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar .nav > li > a:hover {
   border-bottom: 4px solid #fff;
 }
 
-/* line 42, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 44, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -10666,4 +10668,9 @@ span.valid {
   margin: 0;
   padding: 0;
   font-weight: 700;
+}
+
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
+.btn-link {
+  padding: 10px;
 }
